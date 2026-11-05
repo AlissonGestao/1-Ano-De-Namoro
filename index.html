@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beatriz & Alisson | Nosso Primeiro Ano 🌻</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff9eb;
+    color: #4b4932;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(140deg,#fff4d5,#f9e5ad,#fff8e8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 30px 15px;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px,12vw,115px);
+    color: #526c3c;
+    text-shadow: 2px 3px 8px #bca56c55;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display',serif;
+    font-size: clamp(18px,4vw,27px);
+    color: #92723d;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #89744d;
+    margin-bottom: 35px;
+}
+
+button {
+    border: none;
+    background: #557744;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+    box-shadow: 0 7px 20px #526c3c44;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    background: #3d5d30;
+}
+
+.flower {
+    position: absolute;
+    font-size: 65px;
+    animation: balanco 4s infinite ease-in-out;
+}
+
+.flower:nth-child(1) {
+    top: 8%;
+    left: 5%;
+}
+
+.flower:nth-child(2) {
+    top: 15%;
+    right: 7%;
+    animation-delay: 1s;
+}
+
+.flower:nth-child(3) {
+    bottom: 10%;
+    left: 8%;
+    animation-delay: 2s;
+}
+
+.flower:nth-child(4) {
+    bottom: 8%;
+    right: 8%;
+    animation-delay: 1.5s;
+}
+
+@keyframes balanco {
+    0%,100% {transform: rotate(-10deg) translateY(0)}
+    50% {transform: rotate(10deg) translateY(-12px)}
+}
+
+#site {
+    display: none;
+}
+
+section {
+    padding: 85px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Great Vibes',cursive;
+    font-size: 55px;
+    color: #526c3c;
+    margin-bottom: 30px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #b18b46;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.carta {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px #8d71321b;
+    line-height: 2;
+    font-size: 15px;
+    border: 1px solid #f0dfb6;
+}
+
+.carta p {
+    margin-bottom: 20px;
+}
+
+.contador {
+    background: linear-gradient(135deg,#496c3d,#29482f);
+    color: white;
+    text-align: center;
+}
+
+.contador .titulo {
+    color: #ffe5a3;
+}
+
+.numeros {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 12px;
+    max-width: 650px;
+    margin: 35px auto;
+}
+
+.numero {
+    background: #ffffff19;
+    border: 1px solid #ffffff30;
+    padding: 22px 5px;
+    border-radius: 18px;
+}
+
+.numero strong {
+    display: block;
+    font-family: 'Playfair Display',serif;
+    font-size: clamp(25px,5vw,43px);
+    color: #ffe5a3;
+}
+
+.numero span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.momentos {
+    display: grid;
+    gap: 18px;
+}
+
+.momento {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 23px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #8d713219;
+}
+
+.momento .emoji {
+    font-size: 35px;
+}
+
+.momento h3 {
+    font-family: 'Playfair Display',serif;
+    color: #557744;
+    margin-bottom: 7px;
+}
+
+.momento p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #81745f;
+}
+
+.promessa {
+    background: #f8efd9;
+}
+
+.promessa-box {
+    background: #fffaf0;
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid #ead9b4;
+}
+
+.promessa-box p {
+    font-family: 'Playfair Display',serif;
+    font-size: 21px;
+    line-height: 2;
+}
+
+.assinatura {
+    font-family: 'Great Vibes',cursive;
+    font-size: 43px;
+    color: #557744;
+    margin-top: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 45px 15px;
+    background: #f5e8c9;
+    color: #756747;
+}
+
+footer h2 {
+    font-family: 'Great Vibes',cursive;
+    font-size: 42px;
+    color: #557744;
+}
+
+.coracao {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 10;
+    animation: subir 7s linear forwards;
+}
+
+@keyframes subir {
+    to {
+        transform: translateY(-110vh) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width:550px) {
+    .numeros {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .carta {
+        padding: 23px;
+    }
+
+    .flower {
+        font-size: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="flower">🌻</div>
+    <div class="flower">🌻</div>
+    <div class="flower">🌻</div>
+    <div class="flower">🌻</div>
+
+    <div class="hero-content">
+        <p>UMA HISTÓRIA QUE COMEÇOU EM UM JOGO</p>
+
+        <h1>Beatriz & Alisson</h1>
+
+        <h2>Nosso primeiro ano de amor ❤️</h2>
+
+        <p>365 DIAS ESCOLHENDO VOCÊ</p>
+
+        <button onclick="abrirSite()">
+            Abra nossa história 💌
+        </button>
+    </div>
+
+</header>
+
+<main id="site">
+
+<section>
+    <div class="container">
+
+        <div class="subtitulo">Para minha pessoa favorita</div>
+
+        <h2 class="titulo">Minha Beatriz 🌻</h2>
+
+        <div class="carta">
+
+          eh 1 ano amor a gente faz agora de namoro e eu sinceramente nem consigo imaginar tudo que passamos para chegar até aqui parece que foi ontem que a gente se conheceu em um simples jogo sem imaginar que dali poderia nascer uma história tão bonita como a nossa quem diria que uma partida de um jogo iria me trazer uma pessoa tão especial que se tornaria uma das partes mais importantes da minha vida
+
+às vezes eu paro para pensar em como tudo começou e fico imaginando como algo que parecia tão simples acabou se transformando em algo tão grande na minha vida eu nunca poderia imaginar que por trás de uma tela eu encontraria alguém que me faria sentir tantas coisas boas alguém que me faria sorrir nos dias difíceis alguém que eu teria tanta vontade de conversar todos os dias e alguém que eu escolheria amar mesmo sem ainda ter tido a oportunidade de olhar nos olhos e abraçar pessoalmente
+
+e olha amor foram tantas coisas até aqui tantos momentos bons tantas conversas tantas risadas tantos acertos e também tantos erros porque nem tudo são flores e a gente sabe muito bem disso já tivemos nossas dificuldades nossos desentendimentos nossos momentos complicados e talvez em alguns momentos as coisas não tenham sido tão fáceis mas mesmo assim continuamos aqui e isso mostra o quanto nosso sentimento é verdadeiro porque apesar de qualquer dificuldade nunca deixamos de tentar nunca deixamos de cuidar um do outro e principalmente nunca deixamos de nos amar
+
+eu sou um garoto de muita muita sorte por ter encontrado você no meio de tantas pessoas nesse mundo por ter tido a oportunidade de conhecer justamente você e poder chamar você de minha namorada eu poderia ter conhecido qualquer pessoa naquele jogo mas de alguma forma nossos caminhos se encontraram e hoje eu tenho a certeza de que foi uma das melhores coisas que já aconteceram na minha vida você não faz ideia do quanto sou feliz por ter você comigo e do quanto eu agradeço por cada momento que compartilhamos
+
+Beatriz eu quero que você saiba que não importa quantas vezes a gente precise enfrentar dificuldades eu quero continuar aqui quero continuar sendo seu namorado seu companheiro seu melhor amigo e aquela pessoa com quem você pode contar quando tudo estiver bem e principalmente quando nada estiver dando certo quero ser aquele que vai te ouvir quando você precisar desabafar que vai te fazer sorrir quando estiver triste e que vai fazer de tudo para que você nunca se sinta sozinha
+
+mesmo com essa distância que existe entre nós eu sinto você presente em tantos momentos do meu dia é engraçado pensar que alguém que está tão longe consegue estar tão perto do meu coração eu ainda não posso te dar aquele abraço que tanto quero não posso segurar sua mão enquanto caminhamos juntos nem olhar nos seus olhos e dizer pessoalmente o quanto você é importante para mim mas pode ter certeza de que existe um garoto aqui que sonha muito com esse dia e que conta os dias para finalmente transformar todas essas conversas em momentos reais
+
+eu imagino tantas coisas ao seu lado imagino nosso primeiro encontro nosso primeiro abraço nossos passeios nossas brincadeiras nossas fotos juntos e até aqueles momentos bobos em que não estaremos fazendo absolutamente nada mas só de estarmos juntos já será suficiente porque é isso que eu quero com você não quero apenas os momentos perfeitos quero também a rotina quero os dias comuns quero as conversas sem assunto quero as risadas por coisas sem sentido e quero construir uma história em que a gente possa olhar para trás e perceber o quanto valeu a pena esperar
+
+eu vejo um futuro enorme em nós dois e não digo isso apenas porque hoje estamos completando um ano mas porque quando penso no futuro é impossível não imaginar você nele tenho tantos sonhos e tantas vontades que quero realizar ao seu lado quero que um dia a distância seja apenas uma lembrança de uma fase que conseguimos superar quero poder te abraçar sempre que sentir saudade quero poder cuidar de você de pertinho e quero que a gente tenha a oportunidade de viver tudo aquilo que hoje só conseguimos imaginar
+
+eu sei que ainda temos muito para aprender um com o outro ainda vamos passar por muitas fases ainda vamos discordar de algumas coisas ainda vamos ter dias difíceis mas eu espero que nunca percamos essa vontade de fazer dar certo que nunca deixemos o orgulho ser maior que o amor e que sempre encontremos motivos para continuar escolhendo um ao outro porque um relacionamento não é feito apenas de palavras bonitas mas também de atitudes de paciência de respeito de compreensão e de vontade de permanecer mesmo quando as coisas ficam difíceis
+
+e sabe uma coisa que eu nunca quero que você esqueça é que eu tenho muito orgulho da nossa história orgulho de tudo que construímos mesmo estando longe orgulho de cada dificuldade que conseguimos superar e orgulho principalmente de ter você como minha namorada você é uma pessoa incrível e eu espero conseguir demonstrar todos os dias o quanto é especial para mim porque você merece ser amada cuidada valorizada e lembrada do quanto é importante
+
+obrigado por cada mensagem por cada ligação por cada risada por cada momento em que me fez companhia por cada demonstração de carinho e por todas as vezes que mesmo de longe conseguiu melhorar meu dia obrigado por não desistir de nós e por fazer parte da minha vida de uma maneira que eu jamais imaginei que alguém poderia fazer
+
+hoje completamos 1 ano e eu só consigo pensar que esse é apenas o começo da nossa história ainda quero comemorar muitos aniversários de namoro com você quero olhar para trás daqui a 2 5 10 anos e lembrar que tudo começou em um jogo e que aquele encontro aparentemente simples acabou me dando a pessoa com quem eu escolhi compartilhar minha vida
+
+eu te escolheria novamente amor escolheria conhecer você novamente escolheria passar por todas aquelas conversas escolheria cada momento e até cada dificuldade porque tudo isso me trouxe até aqui e me deu a oportunidade de viver esse amor com você
+
+feliz 1 ano de namoro minha Beatriz que venham muitos e muitos anos que a gente continue crescendo juntos que nunca falte amor carinho companheirismo e motivos para sorrir e que muito em breve a gente possa comemorar tudo isso juntinhos sem telas sem distância e sem precisar contar os dias para um abraço
+
+eu te amo muito minha princesa e nunca se esqueça de uma coisa esse garoto aqui é muito muito sortudo por ter você na vida dele ❤️
+
+            <p style="text-align:center;color:#557744;font-weight:600">
+                EU TE AMO BEATRIZ ❤️🌻
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="contador">
+
+    <div class="container">
+
+        <div class="subtitulo">Nosso tempo juntos</div>
+
+        <h2 class="titulo">Cada segundo com você vale a pena</h2>
+
+        <div class="numeros">
+
+            <div class="numero">
+                <strong id="dias">365</strong>
+                <span>DIAS</span>
+            </div>
+
+            <div class="numero">
+                <strong id="horas">00</strong>
+                <span>HORAS</span>
+            </div>
+
+            <div class="numero">
+                <strong id="minutos">00</strong>
+                <span>MINUTOS</span>
+            </div>
+
+            <div class="numero">
+                <strong id="segundos">00</strong>
+                <span>SEGUNDOS</span>
+            </div>
+
+        </div>
+
+        <p>365 dias de uma escolha chamada amor ❤️</p>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="container">
+
+        <div class="subtitulo">Nossa história</div>
+
+        <h2 class="titulo">Como tudo começou</h2>
+
+        <div class="momentos">
+
+            <div class="momento">
+                <div class="emoji">🎮</div>
+                <div>
+                    <h3>O primeiro encontro</h3>
+                    <p>Um simples jogo que acabou nos apresentando e mudando nossas vidas.</p>
+                </div>
+            </div>
+
+            <div class="momento">
+                <div class="emoji">💬</div>
+                <div>
+                    <h3>Nossas conversas</h3>
+                    <p>Mensagens que viraram rotina e uma vontade enorme de conversar todos os dias.</p>
+                </div>
+            </div>
+
+            <div class="momento">
+                <div class="emoji">💗</div>
+                <div>
+                    <h3>O nosso amor</h3>
+                    <p>Mesmo com a distância descobrimos que carinho não precisa de quilômetros para existir.</p>
+                </div>
+            </div>
+
+            <div class="momento">
+                <div class="emoji">🌻</div>
+                <div>
+                    <h3>Nosso primeiro ano</h3>
+                    <p>Uma história linda que ainda tem muitos capítulos para escrever.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="promessa">
+
+    <div class="container">
+
+        <div class="subtitulo">Uma promessa para você</div>
+
+        <h2 class="titulo">Nosso futuro ❤️</h2>
+
+        <div class="promessa-box">
+
+            <p>
+            Eu não prometo que todos os dias serão fáceis mas prometo que quero continuar tentando com você
+
+            Quero que um dia a distância seja apenas uma lembrança e que a gente possa viver tudo aquilo que hoje sonhamos
+
+            Quero continuar escolhendo você todos os dias
+            </p>
+
+            <div class="assinatura">
+                Com amor Alisson
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <h2>Eu e você para sempre 🌻</h2>
+
+    <p>Feito com muito amor por Alisson para Beatriz</p>
+
+    <p>Nosso primeiro ano — 08 de novembro ❤️</p>
+
+</footer>
+
+<script>
+
+// ==================================
+// PERSONALIZE SEU SITE AQUI
+// ==================================
+
+// DATA DO INÍCIO DO NAMORO
+const DATA_NAMORO = "2025-11-08T00:00:00";
+
+// ==================================
+
+function abrirSite() {
+
+    document.getElementById("site").style.display = "block";
+
+    document.getElementById("site").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    chuvaDeAmor();
+}
+
+function atualizarContador() {
+
+    const inicio = new Date(DATA_NAMORO);
+    const agora = new Date();
+
+    let diferenca = Math.max(0, agora - inicio);
+
+    let dias = Math.floor(diferenca / 86400000);
+
+    let horas = Math.floor((diferenca % 86400000) / 3600000);
+
+    let minutos = Math.floor((diferenca % 3600000) / 60000);
+
+    let segundos = Math.floor((diferenca % 60000) / 1000);
+
+    document.getElementById("dias").innerText = dias;
+
+    document.getElementById("horas").innerText =
+        String(horas).padStart(2,"0");
+
+    document.getElementById("minutos").innerText =
+        String(minutos).padStart(2,"0");
+
+    document.getElementById("segundos").innerText =
+        String(segundos).padStart(2,"0");
+}
+
+function chuvaDeAmor() {
+
+    const emojis = ["❤️","🌻","💛","💗","✨"];
+
+    for(let i = 0; i < 35; i++) {
+
+        setTimeout(() => {
+
+            const coracao = document.createElement("div");
+
+            coracao.className = "coracao";
+
+            coracao.innerText =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+            coracao.style.left = Math.random() * 100 + "vw";
+
+            coracao.style.fontSize =
+            (15 + Math.random() * 20) + "px";
+
+            document.body.appendChild(coracao);
+
+            setTimeout(() => coracao.remove(),8000);
+
+        },i * 120);
+    }
+}
+
+atualizarContador();
+
+setInterval(atualizarContador,1000);
+
+</script>
+
+</body>
+</html>
